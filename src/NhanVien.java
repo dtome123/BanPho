@@ -1,4 +1,3 @@
-package BanPho;
 
 import java.util.Date;
 

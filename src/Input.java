@@ -1,5 +1,9 @@
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+
+
 
 public class Input {
 
@@ -25,7 +29,27 @@ public class Input {
 		Input.cTHDs = cTHDs;
 	}
 
-	public static void Input() {
+	public static ArrayList<NhanVien> getNv() {
+		return nv;
+	}
+
+
+	public static void setNv(ArrayList<NhanVien> nv) {
+		Input.nv = nv;
+	}
+
+
+	public static ArrayList<Ban> getBan() {
+		return ban;
+	}
+
+
+	public static void setBan(ArrayList<Ban> ban) {
+		Input.ban = ban;
+	}
+
+
+	public static void Input() throws ParseException {
 		monAns.add(new MonAn(1,"Phở tô nhỏ","Món chính","",50000));
 		monAns.add(new MonAn(2,"Phở tô lớn","Món chính","",50000));
 		monAns.add(new MonAn(3,"Phở đặc biệt","Món chính","",50000));
@@ -52,7 +76,6 @@ public class Input {
 		
 		hd.add(new HoaDon(1, 1, new SimpleDateFormat("dd/MM/yyyy").parse("5/1/2021"), 250000, 1));
 		hd.add(new HoaDon(1, 6, new SimpleDateFormat("dd/MM/yyyy").parse("5/1/2021"), 350000, 2));
-		
 	}
 }
 

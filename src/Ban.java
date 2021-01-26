@@ -1,5 +1,3 @@
-package BanPho;
-
 public class Ban {
 	int id;
 	int soCho;
