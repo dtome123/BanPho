@@ -5,7 +5,10 @@ public class Input {
 
 	private static ArrayList<MonAn> monAns = new ArrayList<MonAn>();
 	private static ArrayList<ChiTietHD> cTHDs = new ArrayList<ChiTietHD>();
-	
+	private static ArrayList<NhanVien> nv = new ArrayList<>();
+	private static ArrayList<Ban> ban = new ArrayList<>();
+	private static ArrayList<HoaDon> hd = new ArrayList<>();
+
 	public static ArrayList<MonAn> getMonAns() {
 		return monAns;
 	}
@@ -35,6 +38,20 @@ public class Input {
 		cTHDs.add(new ChiTietHD(1, 2, 1, 50000));
 		cTHDs.add(new ChiTietHD(2, 1, 1, 50000));
 		
+		nv.add(new NhanVien(1, "Nguyễn Văn A", new SimpleDateFormat("dd/MM/yyyy").parse("11/1/2021"), false,
+				"Nhân viên bán hàng"));
+		nv.add(new NhanVien(2, "Nguyễn Văn B", new SimpleDateFormat("dd/MM/yyyy").parse("10/1/2021"), true,
+				"Nhân viên bán hàng"));
+
+		for (int i = 1; i <= 5; i++) {
+			ban.add(new Ban( i, 5, false));
+		}
+		for (int i = 6; i <= 10; i++) {
+			ban.add(new Ban( i, 10, false));
+		}
+		
+		hd.add(new HoaDon(1, 1, new SimpleDateFormat("dd/MM/yyyy").parse("5/1/2021"), 250000, 1));
+		hd.add(new HoaDon(1, 6, new SimpleDateFormat("dd/MM/yyyy").parse("5/1/2021"), 350000, 2));
 		
 	}
 }
